@@ -13,7 +13,23 @@ SSD stands for Single Shot Multibox Detector. It is a technique that is used to 
 
 <img src="https://github.com/asad-mahmood/Face-Mask-Detection/blob/main/Label%20Count.png"></img>
 
-The visualization tells us that the **Number of Mask images > Number of Non-Mask images**, so this is an imbalanced dataset. But since we are using a SSD pretrained model, which is trained to detect non-mask faces, this imbalance would not matter a lot.
+The visualization tells us that the **Number of Mask images > Number of Non-Mask images**, so this is an imbalanced dataset. But since we are using a SSD pretrained model, which is trained to detect non-mask faces, this imbalance would not matter a lot. Along with that we are using keras preprocessing techniques to artifically increase our dataset size such as by flipping images horizontally, rotating them and etc.
+
+## Traing VS Validation Data
+
+I trained the model for 100 epochs and below I will discuss the results of accuracy and loss.
+
+### Accuracy
+
+I achieved accuracy on training set: 96.86 % and on validation set: 96.87%. Please see the attached picture below.
+
+![](https://github.com/asad-mahmood/Face-Mask-Detection/blob/main/Training%20Vs%20Validation%20Acc.png)
+
+### Loss
+
+I achieved loss on training set: 0.0791 and on validation set: 0.117.  Please see the attached picture below.
+
+![](https://github.com/asad-mahmood/Face-Mask-Detection/blob/main/Training%20Vs%20Validation%20Loss.png)
 
 ## Model Testing
 
@@ -23,3 +39,7 @@ The test dataset has 1698 images and to evaluate the model I have taken a handfu
 * The blob is passed through the SSD network and detections are made with some confidence score.
 * Define a threshold confidence score, above which the detection will be considered as a candidate of being a face. (In this case **confidence threshold = 0.2**)
 * All the detections that qualify the confidence score are then passed to the architecture for classification into mask or non-mask image.
+
+The results are as follows:
+
+[](https://github.com/asad-mahmood/Face-Mask-Detection/blob/main/result.png)
