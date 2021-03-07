@@ -43,7 +43,6 @@ The test dataset has 1698 images and to evaluate the model I have taken a handfu
 The results are as follows:
 
 ![](https://github.com/asad-mahmood/Face-Mask-Detection/blob/main/result.png)
-![](https://github.com/asad-mahmood/Face-Mask-Detection/blob/main/Training%20Vs%20Validation%20Loss.png)
 
 ## Conclusion
 By analyzing the results it can be observed that the whole system works well for faces that have spatial dominance i.e. in image at (1,1), (1,2) and partially for (2,1). It fails partially in case of (2,1) because it didnot detect the masked face of Mona Lisa. In (3,2) it fails to detect the third and fourth lady because their faces are small, blurrd, partially visible and occupy less space in the overall image. **To get better results, different image preprocessing techniques can be used, or confidence threshold can be kept lower, or one can try different blob size.**
