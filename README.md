@@ -11,4 +11,4 @@ SSD stands for Single Shot Multibox Detector. It is a technique that is used to 
 
 The visualization below tells us that the **Number of Mask images > Number of Non-Mask images**, so this is an imbalanced dataset. But since we are using a SSD pretrained model, which is trained to detect non-mask faces, this imbalance would not matter a lot.
 
-[](https://github.com/asad-mahmood/Face-Mask-Detection/blob/main/Label%20Count.png)
+![Image](https://github.com/asad-mahmood/Face-Mask-Detection/blob/main/Label%20Count.png)
