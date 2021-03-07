@@ -14,3 +14,12 @@ SSD stands for Single Shot Multibox Detector. It is a technique that is used to 
 <img src="https://github.com/asad-mahmood/Face-Mask-Detection/blob/main/Label%20Count.png"></img>
 
 The visualization tells us that the **Number of Mask images > Number of Non-Mask images**, so this is an imbalanced dataset. But since we are using a SSD pretrained model, which is trained to detect non-mask faces, this imbalance would not matter a lot.
+
+## Model Testing
+
+The test dataset has 1698 images and to evaluate the model I have taken a handful of images from this dataset as there are no labels for faces in the dataset.
+* Gamma Correction for making the image appear in more light.**(Gamma = 2)**
+* blobFromImage creates 4-dimensional blob from image. Optionally resizes and crops image from center, subtract mean values, scales values by scalefactor, swap Blue and Red channels.
+* The blob is passed through the SSD network and detections are made with some confidence score.
+* Define a threshold confidence score, above which the detection will be considered as a candidate of being a face. (In this case **confidence threshold = 0.2**)
+* All the detections that qualify the confidence score are then passed to the architecture for classification into mask or non-mask image.
