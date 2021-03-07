@@ -42,4 +42,4 @@ The test dataset has 1698 images and to evaluate the model I have taken a handfu
 
 The results are as follows:
 
-[](https://github.com/asad-mahmood/Face-Mask-Detection/blob/main/result.png)
+![](https://github.com/asad-mahmood/Face-Mask-Detection/blob/main/result.png)
